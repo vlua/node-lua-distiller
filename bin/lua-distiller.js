@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const pkg = require("../package");
 const p = require("commander");
 const fs = require("fs");
