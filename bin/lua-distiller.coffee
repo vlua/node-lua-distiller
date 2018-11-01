@@ -57,7 +57,7 @@ if __DISTILLER == nil then
     exec = function(self, id)
       local func = self.FACTORIES[id]
       assert(func, "missing factory method for id " .. tostring(id))
-      func(__DISTILLER.require)
+      return func(__DISTILLER.require)
     end
   }
 end
@@ -218,7 +218,7 @@ end)
 
 # 加入口代码块
 result += """
-__DISTILLER:exec("#{entranceName}")
+return __DISTILLER:exec("#{entranceName}")
 """
 
 # 输出
