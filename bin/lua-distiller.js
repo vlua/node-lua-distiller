@@ -21,7 +21,7 @@ const COMMENT_MARK = "--";
 let BASE_FILE_PATH = "";
 const HR = "\n\n---------------------------------------\n\n\n";
 const DISTILLER_HEAD = fs.readFileSync(`${__dirname}/distill_head.lua`)
-let EXCLUDE_PACKAGE_NAMES = "cjson zlib pack socket lfs lsqlite3 Cocos2d Cocos2dConstants".split(" ");
+let EXCLUDE_PACKAGE_NAMES = [];//"cjson zlib pack socket lfs lsqlite3 Cocos2d Cocos2dConstants".split(" ");
 
 const RE_REQUIRE = /^.*require[\(\ ][\'"]([a-zA-Z0-9\.\_\/\-]+)[\'"]/mg;
 let OUTPUT_PATH_MERGED_LUA = "";
